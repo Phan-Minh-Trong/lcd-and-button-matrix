@@ -6,30 +6,30 @@
 #include "main.h"
 
 // Macros
-#define BUTTON_PRESSED  1 // Button is pressed
-#define BUTTON_RELEASED 0 // Button is released
+#define BUTTON_PRESSED  0 // Button is pressed
+#define BUTTON_RELEASED 1 // Button is released
 #define TOTAL_BUTTONS 16  // Total buttons count
 #define SPI_RECEIVE_BUFFER_SIZE 2 // Total bytes receive from IC 74HC165
 
-#define BUTTON_0     0
-#define BUTTON_1     1
-#define BUTTON_2     2
-#define BUTTON_3     3
-#define BUTTON_4     4
-#define BUTTON_5     5
-#define BUTTON_6     6
-#define BUTTON_7     7
-#define BUTTON_8     8
-#define BUTTON_9     9
-#define BUTTON_10   10
-#define BUTTON_11   11
-#define BUTTON_12   12
-#define BUTTON_13   13
-#define BUTTON_14   14
-#define BUTTON_15   15
+#define BUTTON_1   ('1')
+#define BUTTON_2   ('2')
+#define BUTTON_3   ('3')
+#define BUTTON_4   ('^')
+#define BUTTON_5   ('v')
+#define BUTTON_6   ('6')
+#define BUTTON_7   ('5')
+#define BUTTON_8   ('4')
+#define BUTTON_9   ('7')
+#define BUTTON_10  ('8')
+#define BUTTON_11  ('9')
+#define BUTTON_12  ('>')
+#define BUTTON_13  ('<')
+#define BUTTON_14  ('B')
+#define BUTTON_15  ('0')
+#define BUTTON_16  ('E')
 
 typedef struct Button{
-    uint8_t buttons_state[TOTAL_BUTTONS];
+    uint16_t buttons_state;
 } Button;
 
 /**
