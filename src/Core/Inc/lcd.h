@@ -86,8 +86,13 @@
 #define LCD_DIGI_GAMM_CTRL2 0x00E3          // Digital Gamma Control 2
 #define LCD_INTERFACE_CTRL  0x00F6          // Interface Control
 
-
-
+/**
+ * @brief
+ * Initialize lcd module (must be call before using).
+ * @param hspi: Pointer to SPI handle
+ * @return 0 on success, -1 on errors
+ */
+int8_t lcd_init(void);
 
 
 
